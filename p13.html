@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <button onclick="Hello()">Click here</button>
+    <button onclick="Displayname()">Display name</button>
+
+    <hr>
+
+    <input type="text" id="username">
+    <button ondblclick="submitName()">Submit</button>
+
+    <script>
+
+      function Hello() 
+      {
+        document.write("<h1>Hello</h1>");
+      }
+
+      function Displayname() 
+      {
+        document.write("<h1>Hamzaa</h1>");
+      }
+
+      //Hello();
+      //Hello();
+      //Hello();
+
+      function submitName()
+      {
+        let username=document.getElementById("username").value;
+        document.write("<h1 style='background-color:yellow'>"+username+"</h1>")
+      }
+
+    </script>
+
+  </body>
+</html>
