@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: chartreuse;
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <button onclick="display()">Click here</button>
+    <button onclick="Circle()">Circle</button>
+   
+
+    <script>
+      function display() 
+      {
+        document.querySelector(".container").innerHTML = "<h1>Hello</h1>";
+      }
+
+      function Circle()
+      {
+        document.querySelector(".container").style.borderRadius="100%"
+        document.querySelector(".container").style.colo
+      }
+    </script>
+  </body>
+</html>
