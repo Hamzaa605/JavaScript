@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: plum;
+        height: 400px;
+        padding: 20px;
+      }
+
+      #box {
+        background-color: antiquewhite;
+        height: 250px;
+        width: 80%;
+        padding: 10px;
+      }
+
+      #Heading {
+        border: 2px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="box">
+        <h1 id="Heading">Heading</h1>
+      </div>
+    </div>
+
+    <hr />
+
+    <a href="https://www.google.co.in/" id="link">Google</a>
+
+    <form action="" onsubmit="" id="form">
+      <input type="text" name="username"/>
+      <input type="text" name="age"/>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      document.getElementById("container").addEventListener("click", () => {
+        alert("container");
+      },true);
+
+      document.getElementById("box").addEventListener("click", (event) => {
+        //event.stopPropagation();
+
+        alert("box");
+      },true);
+
+      document.getElementById("Heading").addEventListener("click", (event) => {
+        //event.stopPropagation();
+        alert("Heading");
+      },true);
+
+      document.getElementById("link").addEventListener("click", (event) => {
+        event.preventDefault();
+      });
+
+      document.getElementById("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log(event.target.age.value);
+        console.log(event.target.username.value);
+      });
+    </script>
+  </body>
+</html>
