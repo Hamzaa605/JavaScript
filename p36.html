@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function processData() 
+      {
+        const data = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+        console.log(data);
+         const jsonData= await data.json();
+         console.log(jsonData);
+      }
+     //processData();
+
+     async function dictionary()
+     {
+         const response= await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
+          const data= await response.json()
+          console.log(data[0]["meanings"][2]["definitions"][4]);
+     }
+
+     dictionary();
+    </script>
+  </body>
+</html>

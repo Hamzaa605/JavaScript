@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        async function productsData() 
+        {
+          const data1 = await fetch("http://localhost:8080/products");
+          console.log(data1);
+           const jsonData= await data1.json();
+           console.log(jsonData);
+        }
+     //productsData();
+
+     async function categoryData() 
+        {
+          const data2 = await fetch("http://localhost:8080/category");
+          console.log(data2);
+           const jData= await data2.json();
+           console.log(jData);
+        }
+     categoryData();
+    </script>
+</body>
+</html>
